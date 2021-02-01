@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "PjoGDF/hZpS4T/6rvv3KaoAPTFkf/LlgZgTEnMgTC645syIjWkBt80Pf7jP++MNG7Snecl3vnwAWhYaTstrx2g==",
+  "success": true,
+  "projectFilePath": "C:\\Storage\\Develop\\Aspnet\\Holamundo\\Holamundo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.dotnet.watcher.tools\\2.0.2\\microsoft.dotnet.watcher.tools.2.0.2.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.netcore.app\\2.0.7\\microsoft.netcore.app.2.0.7.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.0.7\\microsoft.netcore.dotnetapphost.2.0.7.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.netcore.dotnethostpolicy\\2.0.7\\microsoft.netcore.dotnethostpolicy.2.0.7.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.netcore.dotnethostresolver\\2.0.7\\microsoft.netcore.dotnethostresolver.2.0.7.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.2\\microsoft.netcore.platforms.2.0.2.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\mysqlconnector\\1.2.1\\mysqlconnector.1.2.1.nupkg.sha512",
+    "C:\\Users\\edgar\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

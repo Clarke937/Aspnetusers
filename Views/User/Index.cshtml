@@ -1,0 +1,73 @@
+@{
+    Layout = "_Themelayout";
+}
+
+@model User
+<div class="row">
+    <div class="col-4">
+        <div class="card p-5">
+            <h1 class="text-center text-primary">Registro de Usuarios</h1>
+            <form asp-action="Insertar" asp-controller="User" method="POST" class="mt-4">
+                
+                <div class="form-group">
+                    <label>Nombre:</label>
+                    <input type="text" class="form-control form-control-solid" asp-for="nombres">
+                    <span asp-validation-for="nombres" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label>Apellido:</label>
+                    <input type="text" class="form-control form-control-solid" asp-for="apellidos">
+                    <span asp-validation-for="apellidos" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" class="form-control form-control-solid" asp-for="correo">
+                    <span asp-validation-for="correo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" class="form-control form-control-solid" min="0" max="120" asp-for="edad">
+                    <span asp-validation-for="edad" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" value="add" class="btn btn-primary btn-block">Registrar</button>
+                    <button type="reset" value="clear" class="btn btn-dark btn-block">Limpiar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="card p-5">
+            <table class="table table-bordered table-hover">
+                <thead> 
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Edad</th>
+                        <th>Borrar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (User user in ViewBag.Usuarios)
+                    {
+                        <tr>
+                            <td>@user.id_usuario</td>
+                            <td>@user.nombres</td>
+                            <td>@user.apellidos</td>
+                            <td>@user.correo</td>
+                            <td>@user.edad</td>
+                            <td>
+                                @using (Html.BeginForm("Delete","User",FormMethod.Post, new { @class="d-inline"})){
+                                    <input type="hidden" value="@user.id_usuario" asp-for="id_usuario">
+                                    <button type="submit" class="btn btn-xs btn-danger"><i class="fal fa-times"></i></button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
